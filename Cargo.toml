@@ -1,0 +1,22 @@
+[package]
+name = "wellenformer"
+version = "0.1.0"
+edition = "2021"
+authors = ["David Huss <dh@atoav.com>"]
+description = "A small CLI tool for rendering rectified audio waveforms with a focus on accuracy over speed"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.1.4", features = ["derive", "color"] }
+colored = "2.0.0"
+image = { version = "0.24.5", features = ["png"] }
+inquire = "0.5.3"
+rayon = "1.6.1"
+symphonia = { version="0.5.2", features = ["mp3", "ogg", "wav", "aac", "flac"] }
+symphonia-core = "0.5.2"
+
+
+# [[bin]]
+# name = "audio"
+# path = "src/audio.rs"
