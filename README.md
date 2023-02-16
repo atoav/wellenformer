@@ -2,9 +2,9 @@
 
 
 
-![](images/aftermath.png)
+![an example of one of the rendered waveforms](images/aftermath.png)
 
-This is a Rust-based CLI tool with the sole purpose of rendering audio files into (rectified) waveformsrepo.
+This is a Rust-based CLI tool with the sole purpose of rendering audio files into (rectified) waveforms.
 
 
 
