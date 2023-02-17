@@ -133,9 +133,9 @@ fn parse_to_u8(string: &str) -> u8 {
 
 fn create_output_directories(path: &PathBuf) {
     let mut p = path.clone();
-    if p.pop() {
+    if p.pop() && p.parent().is_some() {
         // There are directories in this path that may or may not need to be created
-        if !p.exists() {
+        if !p.exists() && p.to_string_lossy() == "" {
             match create_dir_all(&p) {
                 Ok(_) => println!("Created output directory: \"{}\"", p.to_string_lossy().green()),
                 Err(e) => {
